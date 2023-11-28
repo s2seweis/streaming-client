@@ -63,7 +63,7 @@ const EditFilesForm = ({ product }) => {
 
     console.log('line:300', tree);
 
-    const res = await axios.post('/editfiles', formData, config);
+    const res = await axios.post('https://streaming-react-0b3cf7f2eac8.herokuapp.com/editfiles', formData, config);
     
     if (res.data.status === 401 || !res.data) {
       console.log('errror');
@@ -186,7 +186,7 @@ const EditFilesForm = ({ product }) => {
               <div className="image-preview-container">
                 <Form.Group>
                   <img
-                    src={postImage.myFile || `/uploads/${user?.imgpath}`}
+                    src={postImage.myFile || `https://streaming-react-0b3cf7f2eac8.herokuapp.com/Uploads/${user?.imgpath}`}
                     alt="image1"
                   />
                   <div>

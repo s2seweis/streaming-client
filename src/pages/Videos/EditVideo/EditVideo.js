@@ -52,7 +52,7 @@ const EditVideo = () => {
   useEffect(() => {
     const getVideoUrl = async () => {
       try {
-        const response = await axios.get('/video-stream', {
+        const response = await axios.get('https://streaming-react-0b3cf7f2eac8.herokuapp.com/video-stream', {
           headers: {
             'Content-Type': 'application/json',
           },
@@ -101,7 +101,7 @@ const EditVideo = () => {
           />
         </Form>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <video src={`/Videos/${video?.imgpath}`
+          <video src={`https://streaming-react-0b3cf7f2eac8.herokuapp.com/Videos/${video?.imgpath}`
             // || 
             // videoData
           }
@@ -130,7 +130,7 @@ const EditVideo = () => {
         </Form>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <video id="videoPlayer" controls muted="muted" autoPlay>
-            <source src="/video-stream" type="video/mp4" />
+            <source src="https://streaming-react-0b3cf7f2eac8.herokuapp.com/video-stream" type="video/mp4" />
           </video>
         </div>
         <br />

@@ -21,21 +21,21 @@ function AppRouter() {
   const [data2, setData2] = useState([]);
 
   const getUserData = async () => {
-    const res = await axios.get('/getfiles', {
+    const res = await axios.get('https://streaming-react-0b3cf7f2eac8.herokuapp.com/getfiles', {
       headers: {
         'Content-Type': 'application/json',
       },
     });
 
     if (res.data.status === 401 || !res.data) {
-      console.log('errror');
+      // console.log('errror');
     } else {
       setData(res.data.getUser);
     }
   };
 
   const getVideo = async () => {
-    const res = await axios.get('/getvideo', {
+    const res = await axios.get('https://streaming-react-0b3cf7f2eac8.herokuapp.com/getvideo', {
       headers: {
         'Content-Type': 'application/json',
       },

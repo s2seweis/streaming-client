@@ -11,7 +11,7 @@ const Video1 = () => {
   const [data, setData] = useState([]);
 
   const getUserData = async () => {
-    const res = await axios.get('/getvideo', {
+    const res = await axios.get('https://streaming-react-0b3cf7f2eac8.herokuapp.com/getvideo', {
       headers: {
         'Content-Type': 'application/json',
       },

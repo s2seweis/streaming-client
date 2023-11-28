@@ -23,7 +23,7 @@ const Files = () => {
   const [show, setShow] = useState(false);
 
   const getUserData = async () => {
-    const res = await axios.get('/getfiles', {
+    const res = await axios.get('https://streaming-react-0b3cf7f2eac8.herokuapp.com/getfiles', {
       headers: {
         'Content-Type': 'application/json',
       },
@@ -99,7 +99,7 @@ const Files = () => {
                       <div style={{ margin: 'auto' }}>
                         <img
                           style={{ width: '100px', margin: '20px auto' }}
-                          src={`/uploads/${el.imgpath}`}
+                          src={`https://streaming-react-0b3cf7f2eac8.herokuapp.com/Uploads/${el.imgpath}`}
                         />
                         <img
                           style={{ width: '100px', margin: '20px auto' }}
