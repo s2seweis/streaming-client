@@ -84,8 +84,8 @@ const Files = () => {
         </div>
 
         <div className="row d-flex justify-content-between align-iteams-center mt-5">
-          {data.length > 0
-            ? data.map((el) => {
+          {data?.length > 0
+            ? data?.map((el) => {
                 return (
                   <>
                     <Card
